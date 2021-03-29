@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const items = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/taskList", label: "taskList" },
 ];
 
 export const Header = () => {

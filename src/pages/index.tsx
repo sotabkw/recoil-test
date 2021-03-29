@@ -1,9 +1,20 @@
 import Head from "next/head";
 import { Layout } from "src/components/layout";
+import { useRecoilValue, useSetRecoilState, SetterOrUpdater } from "recoil";
+import { todoTitleFormState } from "../atom/TodoTitleFormAtom";
+import { useState } from "react";
+import AddButton from "../components/AddButton";
 
 const Home = () => {
-  const handleClick = () => {
-    window.alert("Hello, World!");
+  // useRecoilValueでtodoTitleFormStateの値を取得
+  const todoTitleFormValue: string = useRecoilValue(todoTitleFormState);
+
+  // useSetRecoilStateでtodoTitleFormStateの値を更新するSetter関数を取得
+  const setTodoTitleFormValue: SetterOrUpdater<string> = useSetRecoilState(todoTitleFormState);
+
+  const handleClick = (event: any) => {
+    const inputValue = event.target.value;
+    setTodoTitleFormValue(inputValue);
   };
 
   return (
@@ -13,7 +24,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h2>タスク追加</h2>
-      <button onClick={handleClick}>Button</button>
+      <input type={"text"} name={"title"} value={todoTitleFormValue} onChange={handleClick} />
+      <AddButton/>
     </Layout>
   );
 };

@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import About from "src/pages/about";
+import About from "src/pages/taskList";
 
 describe("About page", () => {
   it("matches snapshot", () => {
