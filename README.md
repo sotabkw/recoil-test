@@ -1,4 +1,4 @@
-# Next.js starter template.
+# Development environment
 
 - Next.js
 - TypeScript
