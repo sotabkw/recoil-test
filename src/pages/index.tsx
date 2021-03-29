@@ -9,10 +9,10 @@ const Home = () => {
   return (
     <Layout>
       <Head>
-        <title>Home</title>
+        <title>タスク追加</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h2>Home</h2>
+      <h2>タスク追加</h2>
       <button onClick={handleClick}>Button</button>
     </Layout>
   );

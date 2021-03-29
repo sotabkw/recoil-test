@@ -5,10 +5,10 @@ const About = () => {
   return (
     <Layout>
       <Head>
-        <title>About</title>
+        <title>タスク一覧</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h2>About</h2>
+      <h2>タスク一覧</h2>
     </Layout>
   );
 };
