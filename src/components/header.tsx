@@ -8,7 +8,7 @@ const items = [
 export const Header = () => {
   return (
     <header>
-      <h1>Title</h1>
+      <h1>Recoil-Test</h1>
       <nav>
         {items.map(({ href, label }) => {
           return (
